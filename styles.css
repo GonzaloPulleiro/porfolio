@@ -3,11 +3,11 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: #f0e5e5;
 }
 
 header {
-    background-color: #333;
+    background-color: rgb(102, 123, 124);
     color: white;
     padding: 20px;
 }
@@ -15,19 +15,126 @@ header {
 section {
     margin: 20px;
     padding: 20px;
-    background: white;
+    background: rgb(194, 191, 191);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    line-height: 35px;
 }
 
-.proyecto {
+section h2{
+    text-align: center;
+}
+
+
+#objetivos{
+    background-color: #d3d0d0;
+}
+
+
+.proyect{
+    display: flex;
+    column-gap: 6%;
+}
+
+.proyecto:hover{
+    background-color: rgb(218, 214, 209);
+}
+
+.proyecto {    
+    width: 45%;
     margin: 10px 0;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 25px;
+    
 }
 
-a {
-    color: #007BFF;
+.proyecto h3{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.proyecto a{
+   text-decoration: none;
+   color: #a35d5d;
+}
+.proyecto a:hover{
+   text-decoration: none;
+   color: #6e3333;
+}
+
+hr{
+    margin-left: 25%;
+    width: 50%;
+}
+
+.barraTop {
+    list-style: none;
+    text-align: center;
+    display: inline-flex;
+}
+
+.barraTop li {
+    padding: 10px;
+}
+
+.barraTop a {
+    color: wheat;
     text-decoration: none;
 }
+
+.barraTop a:hover {
+    color: burlywood;
+}
+
+.presentacion {
+    display: flex;
+}
+
+.foto {
+    width: 40%;
+    text-align: center;
+}
+
+.txt {
+    width: 50%;
+    text-align: center;
+    align-content: center;
+}
+.txt p{
+    text-align: center;
+}
+.foto img {
+    width: 40%;
+    border-radius: 80px;
+}
+
+p{
+    text-align: justify;
+}
+
+.contact{
+    display: flex;
+}
+
+.fIzq, .fDcha{
+    width: 50%;
+    
+}
+.fIzq p, .fDcha p{
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.fDcha a{
+   padding: 20px;
+   text-decoration: none;
+   color: #a35d5d;
+}
+
+.fDcha a:hover{
+    color: #6e3333;
+ }
+
