@@ -307,8 +307,8 @@ p {
     body {
         font-size: 16px;
     }
-
     header {
+        font-size: 15px;
         padding: 15px 0px;
     }
     .tooltip{
@@ -334,6 +334,9 @@ p {
         width: 90%;
         margin: 10px auto;
     }
+    .fIzq {
+        min-width: 50%;
+    }
 }
 
 @media (max-width: 390px) {
@@ -352,5 +355,30 @@ p {
     }
     .fIzq {
         min-width: 46%;
+    }
+}
+@media (max-width: 376px) {
+    body {
+        font-size: 13px;
+    }
+    header {
+        font-size: 12px;
+    }
+    .foto {
+        width: 45%;
+        
+    }
+    .txt {
+        width: 55%;
+        font-size: 12px;
+    }
+    .txt h1 {
+        font-size: 20px;
+    }
+    .fIzq {
+        min-width: 50%;
+    }
+    .fDcha p {
+        font-size: 14px;
     }
 }
