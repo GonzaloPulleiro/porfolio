@@ -18,11 +18,8 @@
             <li><a href="#sobre-mi">Sobre mí</a></li>
             <li><a href="#proyectos">Proyectos</a></li>
             <li><a href="#contacto">Contacto</a></li>
-            <!--<li><a href="https://www.linkedin.com/in/gonzalo-pulleiro/"><i class="fa-brands fa-linkedin fa-lg"></i></a>
-            </li>-->
-
             <li>
-                <a href="source/Gonzalo_Pulleiro_CV.pdf" id="downloadCV">
+                <a href="/source/Gonzalo_Pulleiro_CV.pdf" id="downloadCV">
                     <i class="fa-regular fa-file fa-lg">
                         <p class="tooltip">Descargar CV</p>
                     </i>
@@ -171,13 +168,13 @@
 
     <script>
         document.getElementById("downloadCV").addEventListener("click", function (event) {
-            event.preventDefault(); // Evita la descarga automática
+            event.preventDefault(); 
 
             let confirmDownload = confirm("Quiere descargar mi currículum?");
 
             if (confirmDownload) {
                 let link = document.createElement("a");
-                link.href = "cv.pdf"; // Asegúrate de cambiarlo por la URL correcta
+                link.href = "source/Gonzalo_Pulleiro_CV.pdf";
                 link.download = "GonzaloPulleiro_CV.pdf";
                 document.body.appendChild(link);
                 link.click();
