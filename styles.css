@@ -188,6 +188,9 @@ p {
     .tooltip{
         left: 66%;
     }
+    .fDcha {
+        width: 90%;
+    }
 }
 @media (max-width: 780px) {
 
@@ -330,5 +333,24 @@ p {
     .proyecto {
         width: 90%;
         margin: 10px auto;
+    }
+}
+
+@media (max-width: 390px) {
+    body {
+        font-size: 14px;
+    }
+    header {
+        font-size: 13px;
+    }
+    .foto {
+        width: 50%;
+    }
+    .txt {
+        width: 50%;
+        font-size: 14px;
+    }
+    .fIzq {
+        min-width: 46%;
     }
 }
