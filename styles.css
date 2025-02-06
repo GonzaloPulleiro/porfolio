@@ -4,17 +4,24 @@ body {
     padding: 0;
     text-align: center;
     background-color: #f0e5e5;
+    padding-top: 80px;
 }
 
 header {
     background-color: rgb(102, 123, 124);
     color: white;
-    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 section {
     margin: 20px;
-    padding: 20px;
+    padding: 75px 40px 20px 40px;
     background: rgb(194, 191, 191);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -22,49 +29,50 @@ section {
     line-height: 35px;
 }
 
-section h2{
+section h2 {
     text-align: center;
 }
 
 
-#objetivos{
+#objetivos {
     background-color: #d3d0d0;
+    text-align: justify;
 }
 
 
-.proyect{
+.proyect {
     display: flex;
     column-gap: 6%;
 }
 
-.proyecto:hover{
+.proyecto:hover {
     background-color: rgb(218, 214, 209);
 }
 
-.proyecto {    
+.proyecto {
     width: 45%;
     margin: 10px 0;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 25px;
-    
 }
 
-.proyecto h3{
+.proyecto h3 {
     text-align: center;
     margin-bottom: 0;
 }
 
-.proyecto a{
-   text-decoration: none;
-   color: #a35d5d;
-}
-.proyecto a:hover{
-   text-decoration: none;
-   color: #6e3333;
+.proyecto a {
+    text-decoration: none;
+    color: #a35d5d;
 }
 
-hr{
+.proyecto a:hover {
+    text-decoration: none;
+    color: #6e3333;
+}
+
+hr {
     margin-left: 25%;
     width: 50%;
 }
@@ -88,8 +96,34 @@ hr{
     color: burlywood;
 }
 
-.presentacion {
+.tooltip {
+    visibility: hidden;
+    color: #1a1a1a;
+    text-align: center;
+    padding: 12px;
+    position: absolute;
+    bottom: -13px;
+    left: 58.5%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 40px;
+    border-top-right-radius: 0;
+    font-family: Arial, sans-serif;
+}
+
+#downloadCV:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+#presentacion {
     display: flex;
+    padding: 80px 40px 20px 40px;
 }
 
 .foto {
@@ -102,39 +136,199 @@ hr{
     text-align: center;
     align-content: center;
 }
-.txt p{
+
+.txt p {
     text-align: center;
 }
+
 .foto img {
     width: 40%;
     border-radius: 80px;
 }
 
-p{
+p {
     text-align: justify;
 }
 
-.contact{
+.contact {
     display: flex;
 }
 
-.fIzq, .fDcha{
-    width: 50%;
-    
+.fIzq {
+    width: 40%;
 }
-.fIzq p, .fDcha p{
+
+.fDcha {
+    width: 60%
+}
+
+.fIzq p,
+.fDcha p {
     line-height: 40px;
     font-size: 16px;
     text-align: center;
 }
 
-.fDcha a{
-   padding: 20px;
-   text-decoration: none;
-   color: #a35d5d;
+.fDcha a {
+    padding: 20px;
+    text-decoration: none;
+    color: #a35d5d;
 }
 
-.fDcha a:hover{
+.fDcha a:hover {
     color: #6e3333;
- }
+}
 
+@media (max-width: 1300px) {
+    .tooltip{
+        left: 62.5%;
+    }
+}
+@media (max-width: 960px) {
+    .tooltip{
+        left: 66%;
+    }
+}
+@media (max-width: 780px) {
+
+    body {
+        font-size: 20px;
+    }
+
+    .tooltip{
+        left: 73%;
+    }
+
+    .foto {
+        align-content: center;
+    }
+
+    .foto img {
+        width: 60%;
+    }
+
+    .txt {
+        font-size: 25px;
+    }
+
+    .txt h1 {
+        font-size: 35px;
+    }
+
+    section #objetivos {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .proyect {
+        display: block;
+    }
+
+    .proyecto {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .fIzq {
+        min-width: 35%;
+    }
+
+    .fDcha {
+        width: 65%;
+    }
+
+    .fDcha p {
+        display: inline-grid;
+        line-height: 0;
+    }
+
+    .fDcha a {
+        padding: 10px;
+    }
+
+}
+
+
+
+@media (max-width: 640px) {
+
+    body {
+        font-size: 18px;
+    }
+
+    header {
+        font-size: 16px;
+    }
+
+    .tooltip{
+        left: 72%;
+    }
+
+    #presentacion {
+        padding: 80px 10px 20px 10px;
+    }
+
+    .foto img {
+        width: 95%;
+    }
+
+    .foto {
+        width: 40%;
+    }
+
+    .txt {
+        width: 60%;
+        font-size: 18px;
+    }
+
+    .txt h1 {
+        font-size: 30px;
+    }
+
+    section {
+        padding: 75px 15px 20px 15px;
+    }
+
+    .fIzq {
+        min-width: 40%;
+    }
+
+    .fDcha {
+        width: 60%;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    header {
+        padding: 15px 0px;
+    }
+    .tooltip{
+        left: 81%;
+    }
+    #presentacion {
+        padding: 70px 5px 10px 5px;
+    }
+
+    .foto {
+        width: 45%;
+    }
+
+    .txt {
+        width: 55%;
+    }
+
+    .txt h1 {
+        font-size: 25px;
+    }
+
+    .proyecto {
+        width: 90%;
+        margin: 10px auto;
+    }
+}

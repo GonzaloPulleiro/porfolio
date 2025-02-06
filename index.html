@@ -13,18 +13,28 @@
 <body>
     <header class="cabeza">
         <nav class="barraTop">
+            <li><a href="#presentacion"><i class="fa-solid fa-user fa-lg"></i></a></li>
             <li><a href="#experiencia">Experiencia</a></li>
             <li><a href="#sobre-mi">Sobre mí</a></li>
             <li><a href="#proyectos">Proyectos</a></li>
             <li><a href="#contacto">Contacto</a></li>
-            <li><a href="https://www.linkedin.com/in/gonzalo-pulleiro/"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+            <!--<li><a href="https://www.linkedin.com/in/gonzalo-pulleiro/"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+            </li>-->
+
+            <li>
+                <a href="source/Gonzalo_Pulleiro_CV.pdf" id="downloadCV">
+                    <i class="fa-regular fa-file fa-lg">
+                        <p class="tooltip">Descargar CV</p>
+                    </i>
+                </a>
             </li>
+
 
 
         </nav>
     </header>
 
-    <section class="presentacion">
+    <section id="presentacion">
         <div class="foto">
             <img src="source/selfie.png" alt="imagen_perfil">
         </div>
@@ -118,6 +128,9 @@
                 <hr>
                 <p>Aplicación para dispositivos con SO Android, realizada integramente en Kotlin, con Android
                     Studio.<br>
+                    Esta app consiste en un gestor de recetas, mediante el cual el usuario puede generar un menú
+                    semanal a partir de recetas de cocina, ya sean las que vienen incluídas como las que el propio
+                    usuario puede crear y compartir.<br>
                     Esta app es mi <a href="https://github.com/GonzaloPulleiro/Proyecto-Fin-de-Ciclo">Proyecto Fin de
                         Ciclo</a>.</p>
             </div>
@@ -146,15 +159,33 @@
             </div>
             <div class="fDcha">
                 <p>
-                <i class="fa-brands fa-linkedin fa-lg" style="color: black;"></i><a
-                    href="https://www.linkedin.com/in/gonzalo-pulleiro/">Gonzalo Pulleiro </a>
-                <i class="fa-solid fa-envelope" style="color: black;"></i><a
-                    href="mailto:gonzalopju@gmail.com">gonzalopju@gmail.com </a>
-                <i class="fa-solid fa-phone" style="color: black;"></i><a href="tel:665013395">665013395 </a>
-            </p>
+                    <a href="https://www.linkedin.com/in/gonzalo-pulleiro/"><i class="fa-brands fa-linkedin fa-lg"
+                            style="color: black;"></i> Gonzalo Pulleiro </a>
+                    <a href="mailto:gonzalopju@gmail.com"><i class="fa-solid fa-envelope" style="color: black;"></i>
+                        gonzalopju@gmail.com </a>
+                    <a href="tel:665013395"><i class="fa-solid fa-phone" style="color: black;"></i> 665013395 </a>
+                </p>
             </div>
         </div>
     </footer>
+
+    <script>
+        document.getElementById("downloadCV").addEventListener("click", function (event) {
+            event.preventDefault(); // Evita la descarga automática
+
+            let confirmDownload = confirm("Quiere descargar mi currículum?");
+
+            if (confirmDownload) {
+                let link = document.createElement("a");
+                link.href = "cv.pdf"; // Asegúrate de cambiarlo por la URL correcta
+                link.download = "GonzaloPulleiro_CV.pdf";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        });
+
+    </script>
 </body>
 
 </html>
