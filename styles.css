@@ -356,6 +356,9 @@ p {
     .fIzq {
         min-width: 46%;
     }
+    .fDcha p {
+        font-size: 14px;
+    }
 }
 @media (max-width: 376px) {
     body {
@@ -378,7 +381,5 @@ p {
     .fIzq {
         min-width: 50%;
     }
-    .fDcha p {
-        font-size: 14px;
-    }
+
 }
