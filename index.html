@@ -25,17 +25,26 @@
         <nav class="barraTop">
             <li><a href="#presentacion"><i class="fa-solid fa-user fa-lg"></i></a></li>
             <li><a href="#experiencia">Experiencia</a></li>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#certificados">Certificados</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+
+
+            <li><a href="#sobre-mi" onclick="gtag('event', 'click', {
+                 'event_category': 'Seccion', 'event_label': 'Sobre mí' });">Sobre mí</a></li>
+            <li><a href="#proyectos" onclick="gtag('event', 'click', {
+                 'event_category': 'Seccion', 'event_label': 'Proyectos' });">Proyectos</a></li>
+            <li><a href="#certificados" onclick="gtag('event', 'click', {
+                 'event_category': 'Seccion', 'event_label': 'Certificados' });">Certificados</a></li>
+            <li><a href="#contacto" onclick="gtag('event', 'click', {
+                 'event_category': 'Seccion', 'event_label': 'Contacto' });">Contacto</a></li>
             <li>
-                <a href="/source/resource/Gonzalo_Pulleiro_CV.pdf" id="downloadCV">
+                <a href="/source/resource/Gonzalo_Pulleiro_CV.pdf" id="downloadCV" target="_blank"
+                    onclick="gtag('event', 'click', { 
+                        'event_category': 'CV', 'event_label': 'CV', 'value': 1 });">
                     <i class="fa-regular fa-file fa-lg">
-                        <p class="tooltip">Ver CV</p>
+                        <p class="tooltip">CV</p>
                     </i>
                 </a>
             </li>
+
         </nav>
     </header>
 
@@ -221,27 +230,27 @@
     </script>
 
     <script>
-    var acc = document.getElementsByClassName("accordion");
+        var acc = document.getElementsByClassName("accordion");
 
-    for (let i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-            for (let j = 0; j < acc.length; j++) {
-                if (acc[j] !== this) { 
-                    acc[j].classList.remove("active");
-                    acc[j].nextElementSibling.style.display = "none";
+        for (let i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                for (let j = 0; j < acc.length; j++) {
+                    if (acc[j] !== this) {
+                        acc[j].classList.remove("active");
+                        acc[j].nextElementSibling.style.display = "none";
+                    }
                 }
-            }
 
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-                panel.style.display = "none";
-            } else {
-                panel.style.display = "block";
-            }
-        });
-    }
-</script>
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
 
 </body>
 
