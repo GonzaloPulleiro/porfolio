@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #f0e5e5;
+    background-color: #c9c9c9;
     padding-top: 80px;
 }
 
@@ -22,7 +22,7 @@ header {
 section {
     margin: 20px;
     padding: 75px 40px 20px 40px;
-    background: rgb(194, 191, 191);
+    background: rgb(213 213 213);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: left;
@@ -35,7 +35,7 @@ section h2 {
 
 
 #objetivos {
-    background-color: #d3d0d0;
+    background-color: #d1d1d1;
     text-align: justify;
 }
 
@@ -46,7 +46,7 @@ section h2 {
 }
 
 .proyecto:hover {
-    background-color: rgb(218, 214, 209);
+    background-color: rgb(211 204 195);
 }
 
 .proyecto {
@@ -178,6 +178,70 @@ p {
 .fDcha a:hover {
     color: #6e3333;
 }
+
+.navCertif{
+    text-align: center;
+}
+
+.accordion {
+    background-color: rgb(213 213 213);
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 60%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+
+  .accordion.first{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  
+  .accordion.last{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: rgb(214, 204, 192);
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 21px;
+    display: none;
+    overflow: hidden;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+  .accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+
+  
+
+.imagenCert{
+    width: 100%;
+    padding: 10px 5px;
+    border-radius: 25px;
+}
+
+
+
+
 
 @media (max-width: 1300px) {
     .tooltip{
@@ -311,6 +375,9 @@ p {
         font-size: 15px;
         padding: 15px 0px;
     }
+    .barraTop li {
+        padding: 6px;
+    }
     .tooltip{
         left: 83%;
     }
@@ -371,13 +438,24 @@ p {
     .fIzq {
         min-width: 46%;
     }
+    .fIzq p {
+        display: inline-grid
+    ;
+    }
     .fDcha p {
         font-size: 14px;
+    }
+    .accordion, 
+    .panel{
+        width: 80%;
     }
 }
 @media (max-width: 376px) {
     body {
         font-size: 13px;
+    }
+    header {
+        font-size: 11px;
     }
 
     .foto {
@@ -390,6 +468,9 @@ p {
     }
     .txt h1 {
         font-size: 20px;
+    }
+    .fDcha a {
+        padding: 8px;
     }
     .fIzq {
         min-width: 50%;

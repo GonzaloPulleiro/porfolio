@@ -27,9 +27,10 @@
             <li><a href="#experiencia">Experiencia</a></li>
             <li><a href="#sobre-mi">Sobre mí</a></li>
             <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#certificados">Certificados</a></li>
             <li><a href="#contacto">Contacto</a></li>
             <li>
-                <a href="/source/Gonzalo_Pulleiro_CV.pdf" id="downloadCV">
+                <a href="/source/resource/Gonzalo_Pulleiro_CV.pdf" id="downloadCV">
                     <i class="fa-regular fa-file fa-lg">
                         <p class="tooltip">Ver CV</p>
                     </i>
@@ -40,7 +41,7 @@
 
     <section id="presentacion">
         <div class="foto">
-            <img src="source/selfie.png" alt="imagen_perfil">
+            <img src="source/resource/selfie.png" alt="imagen_perfil">
         </div>
         <div class="txt">
             <h1><i class="fa-regular fa-handshake"></i> Hola, soy Gonzalo Pulleiro </h1>
@@ -157,6 +158,41 @@
         </div>
     </section>
 
+    <section id="certificados">
+        <h2>Certificados</h2>
+        <nav class="navCertif">
+            <button class="accordion first">Java esencial</button>
+            <div class="panel">
+                <img class="imagenCert" src="source/resource/Java esencial.jpg" alt="Java esencial">
+            </div>
+
+            <button class="accordion">Java avanzado</button>
+            <div class="panel">
+                <img class="imagenCert" src="source/resource/Java avanzado 2.jpg" alt="Java avanzado">
+            </div>
+
+            <button class="accordion">Java Servicios Web</button>
+            <div class="panel">
+                <img class="imagenCert" src="source/resource/Java esencial.jpg" alt="Java Servicios Web">
+            </div>
+            <button class="accordion">Domina Java</button>
+            <div class="panel">
+                <img class="imagenCert" src="source/resource/Domina Java.jpg" alt="Domina Java">
+            </div>
+            <button class="accordion">Spring Boot Esencial</button>
+            <div class="panel">
+                <img class="imagenCert" src="source/resource/Spring Boot esencial.jpg" alt="Spring Boot Esencial">
+            </div>
+
+            <button class="accordion last">Domina Spring Boot</button>
+            <div class="panel">
+                <img class="imagenCert" src="source/resource/Domina Spring Boot.jpg" alt="Domina Spring Boot">
+            </div>
+
+
+        </nav>
+    </section>
+
 
 
     <footer id="contacto">
@@ -180,9 +216,33 @@
     <script>
         document.getElementById("downloadCV").addEventListener("click", function (event) {
             event.preventDefault();
-            window.open("/porfolio/source/Gonzalo_Pulleiro_CV.pdf", "_blank");
+            window.open("source/resource/Gonzalo_Pulleiro_CV.pdf", "_blank");
         });
     </script>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+
+    for (let i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            for (let j = 0; j < acc.length; j++) {
+                if (acc[j] !== this) { 
+                    acc[j].classList.remove("active");
+                    acc[j].nextElementSibling.style.display = "none";
+                }
+            }
+
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
+
 </body>
 
 </html>
