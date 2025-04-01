@@ -23,7 +23,7 @@
 <body>
     <header class="cabeza">
         <nav class="barraTop">
-            <li><a href="#presentacion"><i class="fa-solid fa-user fa-lg"></i></a></li>
+
             <li><a href="#experiencia" onclick="gtag('event', 'click', {
                  'event_category': 'Seccion', 'event_label': 'Experiencia' });">Experiencia</a></li>
 
@@ -37,8 +37,7 @@
             <li><a href="#contacto" onclick="gtag('event', 'click', {
                  'event_category': 'Seccion', 'event_label': 'Contacto' });">Contacto</a></li>
             <li>
-                <a href="/source/resource/Gonzalo_Pulleiro_CV.pdf" id="downloadCV" target="_blank"
-                    onclick="gtag('event', 'click', { 
+                <a href="/source/resource/Gonzalo_Pulleiro_CV.pdf" id="downloadCV" target="_blank" onclick="gtag('event', 'click', { 
                         'event_category': 'CV', 'event_label': 'CV', 'value': 1 });">
                     <i class="fa-regular fa-file fa-lg">
                         <p class="tooltip">CV</p>
@@ -61,11 +60,15 @@
 
     <section id="experiencia">
         <h2>Experiencia</h2>
-        <p>Mi experiencia laboral hasta el momento es en el mundo del comercio, donde adquirí una sólida
-            experiencia en atención al cliente, ventas y gestión de equipos.<br>
-            Desafortunadamente no cuento con experiencia en este nuevo entorno laboral al que intento acceder,
-            aunque con lo que si cuento es con las ganas, el entusiasmo y el optimismo de dar lo máximo de mí y
-            demostrar mi valía.
+
+        <p>Sólida experiencia en atención al cliente, ventas y gestión de equipos, adquirido
+            tras más de 6 años en el sector del comercio<br>
+            Actualmente estoy en búsqueda activa de empleo en el sector TIC, al que intento acceder como desarrollador.<br>
+            La experiencia es la adquirida durante dos años de transformación a <em>Técnico Superior en Desarrollo de Aplicaciones
+            Multiplataforma</em> y como empleado autodidácta, donde he obtenido conocimientos sobre varios lenguajes de programación
+            (<strong>Java, Python, C++</strong>), manejo, creación y consultas a bases de datos (<strong>SQL</strong>), y también a 
+            manejar algún que otro framework (<strong>SpringBoot, Angular</strong>).<br>
+            Cuento  con las ganas, el entusiasmo y el optimismo de dar lo máximo de mí y demostrar mi valía.
         </p>
 
 
@@ -106,6 +109,7 @@
             </ul>
             También tengo base de Git, JDBC, Hibernate, JPA, Maven y Gradle.<br>
             Creación de máquinas virtuales con Oracle VirtualBox.<br>
+            Creación de módulos y uso de <b>ERP Odoo</b>.<br>
             Para trabajar con bases de datos empleamos <b>MySQL,PhpMyAdmin, PostgreSQL, DBeaver</b>.
             <br>
             En la realización de las FCT trabajé con <b>HTML5, CSS3, JavaScript(sobre todo Jquery) y PHP </b>, lo que
@@ -171,33 +175,40 @@
     <section id="certificados">
         <h2>Certificados</h2>
         <nav class="navCertif">
-            <button class="accordion first">Java esencial</button>
+            <button class="accordion first">Java</button>
             <div class="panel">
-                <img class="imagenCert" src="source/resource/Java esencial.jpg" alt="Java esencial">
-            </div>
 
-            <button class="accordion">Java avanzado</button>
-            <div class="panel">
-                <img class="imagenCert" src="source/resource/Java avanzado 2.jpg" alt="Java avanzado">
-            </div>
-
-            <button class="accordion">Java Servicios Web</button>
-            <div class="panel">
-                <img class="imagenCert" src="source/resource/Java esencial.jpg" alt="Java Servicios Web">
-            </div>
-            <button class="accordion">Domina Java</button>
-            <div class="panel">
                 <img class="imagenCert" src="source/resource/Domina Java.jpg" alt="Domina Java">
+                <img class="imagenCert" src="source/resource/Java Servicios web.jpg" alt="Java Servicios Web">
+                <img class="imagenCert" src="source/resource/Java avanzado 2.jpg" alt="Java avanzado">
+                <img class="imagenCert" src="source/resource/Java esencial.jpg" alt="Java esencial">
+
+
+
             </div>
-            <button class="accordion">Spring Boot Esencial</button>
+
+
+            <button class="accordion">Spring Boot</button>
             <div class="panel">
+                <img class="imagenCert" src="source/resource/Domina Spring Boot.jpg" alt="Domina Spring Boot">
                 <img class="imagenCert" src="source/resource/Spring Boot esencial.jpg" alt="Spring Boot Esencial">
             </div>
 
-            <button class="accordion last">Domina Spring Boot</button>
+            <button class="accordion">Angular</button>
             <div class="panel">
-                <img class="imagenCert" src="source/resource/Domina Spring Boot.jpg" alt="Domina Spring Boot">
+                <img class="imagenCert" src="source/resource/Angular esencial.jpg" alt="Angular esencial">
+                <img class="imagenCert" src="source/resource/Angular con un cafe.jpg" alt="Angular con un café">
             </div>
+
+            <button class="accordion">Python</button>
+            <div class="panel">
+                <img class="imagenCert" src="source/resource/Python sin experiencia.jpg" alt="Python sin experiencia">
+            </div>
+            <button class="accordion">Google AI</button>
+            <div class="panel">
+                <img class="imagenCert" src="source/resource/Google_AI_Essentials.jpg" alt="Google_AI_Essentials">
+            </div>
+
 
 
         </nav>
@@ -252,6 +263,8 @@
             });
         }
     </script>
+
+
 
 </body>
 
