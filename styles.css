@@ -218,7 +218,18 @@ p {
     width: 70%;
     margin: 0 auto;
     border-radius: 10px;
+    position: relative;
 }
+
+.carousel-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+
   .accordion:after {
     content: '\02795'; /* Unicode character for "plus" sign (+) */
     font-size: 13px;
@@ -237,6 +248,8 @@ p {
     width: 100%;
     padding: 10px 5px;
     border-radius: 25px;
+    flex: 0 0 100%;
+    object-fit: cover;
 }
 
 

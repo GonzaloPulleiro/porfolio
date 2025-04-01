@@ -63,12 +63,16 @@
 
         <p>Sólida experiencia en atención al cliente, ventas y gestión de equipos, adquirido
             tras más de 6 años en el sector del comercio<br>
-            Actualmente estoy en búsqueda activa de empleo en el sector TIC, al que intento acceder como desarrollador.<br>
-            La experiencia es la adquirida durante dos años de transformación a <em>Técnico Superior en Desarrollo de Aplicaciones
-            Multiplataforma</em> y como empleado autodidácta, donde he obtenido conocimientos sobre varios lenguajes de programación
-            (<strong>Java, Python, C++</strong>), manejo, creación y consultas a bases de datos (<strong>SQL</strong>), y también a 
+            Actualmente estoy en búsqueda activa de empleo en el sector TIC, al que intento acceder como
+            desarrollador.<br>
+            La experiencia es la adquirida durante dos años de transformación a <em>Técnico Superior en Desarrollo de
+                Aplicaciones
+                Multiplataforma</em> y como empleado autodidácta, donde he obtenido conocimientos sobre varios lenguajes
+            de programación
+            (<strong>Java, Python, C++</strong>), manejo, creación y consultas a bases de datos (<strong>SQL</strong>),
+            y también a
             manejar algún que otro framework (<strong>SpringBoot, Angular</strong>).<br>
-            Cuento  con las ganas, el entusiasmo y el optimismo de dar lo máximo de mí y demostrar mi valía.
+            Cuento con las ganas, el entusiasmo y el optimismo de dar lo máximo de mí y demostrar mi valía.
         </p>
 
 
@@ -177,17 +181,11 @@
         <nav class="navCertif">
             <button class="accordion first">Java</button>
             <div class="panel">
-
                 <img class="imagenCert" src="source/resource/Domina Java.jpg" alt="Domina Java">
                 <img class="imagenCert" src="source/resource/Java Servicios web.jpg" alt="Java Servicios Web">
                 <img class="imagenCert" src="source/resource/Java avanzado 2.jpg" alt="Java avanzado">
                 <img class="imagenCert" src="source/resource/Java esencial.jpg" alt="Java esencial">
-
-
-
             </div>
-
-
             <button class="accordion">Spring Boot</button>
             <div class="panel">
                 <img class="imagenCert" src="source/resource/Domina Spring Boot.jpg" alt="Domina Spring Boot">
@@ -196,6 +194,7 @@
 
             <button class="accordion">Angular</button>
             <div class="panel">
+                <img class="imagenCert" src="source/resource/Angular avanzado.jpg" alt="Angular avanzado">
                 <img class="imagenCert" src="source/resource/Angular esencial.jpg" alt="Angular esencial">
                 <img class="imagenCert" src="source/resource/Angular con un cafe.jpg" alt="Angular con un café">
             </div>
@@ -264,6 +263,29 @@
         }
     </script>
 
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".panel").forEach(panel => {
+        let images = panel.querySelectorAll(".imagenCert");
+        
+        if (images.length > 1) {
+            let index = 0;
+            const container = document.createElement("div");
+            container.classList.add("carousel-container");
+
+            // Mueve las imágenes dentro del contenedor
+            images.forEach(img => container.appendChild(img));
+            panel.appendChild(container);
+
+            setInterval(() => {
+                index = (index + 1) % images.length;
+                container.style.transform = `translateX(-${index * 100}%)`;
+            }, 5000); // Cambia cada 5 segundos
+        }
+    });
+});
+
+</script>
 
 
 </body>
