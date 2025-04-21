@@ -3,9 +3,8 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    /*background-color: #c9c9c9;*/
     padding-top: 80px;
-    background-image: url("/source/gradii-1920x1080.png");
+    background-image: url("source/gradii-1920x1080.png");
 }
 
 header {
@@ -118,8 +117,8 @@ hr {
 }
 
 #downloadCV:hover .tooltip {
-  visibility: visible;
-  opacity: 1;
+    visibility: visible;
+    opacity: 1;
 }
 
 #presentacion {
@@ -173,14 +172,14 @@ p {
 .fDcha a {
     padding: 20px;
     text-decoration: none;
-    color: #a35d5d;
+    color: black;
 }
 
 .fDcha a:hover {
     color: #6e3333;
 }
 
-.navCertif{
+.navCertif {
     text-align: center;
 }
 
@@ -194,25 +193,19 @@ p {
     border: none;
     outline: none;
     transition: 0.4s;
-  }
+}
 
-  .accordion.first{
+.accordion.first {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-  }
-  
-  .accordion.last{
+}
+
+.accordion.last {
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-  }
-  
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .accordion:hover {
-    background-color: rgb(214, 204, 192);
-  }
-  
-  /* Style the accordion panel. Note: hidden by default */
-  .panel {
+}
+
+.panel {
     padding: 0 21px;
     display: none;
     overflow: hidden;
@@ -220,6 +213,10 @@ p {
     margin: 0 auto;
     border-radius: 10px;
     position: relative;
+}
+
+.panel img{
+    border-radius: 60px;
 }
 
 .carousel-container {
@@ -231,52 +228,83 @@ p {
 
 
 
-  .accordion:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
+.accordion:after {
+    content: '\02795';
     font-size: 13px;
     color: #777;
     float: right;
     margin-left: 5px;
-  }
-  
-  .active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
-  }
-
-  
-
-.imagenCert{
-    width: 100%;
-    padding: 10px 5px;
-    border-radius: 25px;
-    flex: 0 0 100%;
-    object-fit: cover;
 }
 
+
+
+.d-block.w-100 {
+    width: 80% !important;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+#carouselCertificadosJava,
+#carouselCertificadosSpring,
+#carouselCertificadosAngular {
+    margin: 10px;
+}
+
+
+.carousel-inner .carousel-item {
+    transition: transform 1s ease-in-out;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 60%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+}
+thead {
+    background-color: rgb(102, 123, 124);
+    color: white;
+}
+tr:nth-child(even) {
+    background-color:   rgb(191, 201, 201);
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+}
 
 
 
 
 @media (max-width: 1300px) {
-    .tooltip{
+    .tooltip {
         left: 68.5%;
     }
 }
+
 @media (max-width: 960px) {
-    .tooltip{
+    .tooltip {
         left: 75%;
     }
+
     .fDcha {
         width: 90%;
     }
 }
+
 @media (max-width: 780px) {
 
     body {
         font-size: 20px;
     }
 
-    .tooltip{
+    .tooltip {
         left: 84%;
     }
 
@@ -382,16 +410,20 @@ p {
     body {
         font-size: 16px;
     }
+
     header {
         font-size: 15px;
         padding: 15px 0px;
     }
+
     .barraTop li {
         padding: 6px;
     }
-    .tooltip{
+
+    .tooltip {
         left: 91%;
     }
+
     #presentacion {
         padding: 70px 5px 10px 5px;
     }
@@ -412,6 +444,7 @@ p {
         width: 90%;
         margin: 10px auto;
     }
+
     .fIzq {
         min-width: 50%;
     }
@@ -421,10 +454,12 @@ p {
     header {
         font-size: 14px;
     }
+
     .tooltip {
         left: 91%;
         bottom: -5px;
     }
+
     .fDcha p {
         font-size: 15px;
     }
@@ -434,59 +469,73 @@ p {
     body {
         font-size: 14px;
     }
+
     header {
         font-size: 12px;
     }
+
     .tooltip {
         left: 90%;
     }
+
     .foto {
         width: 50%;
     }
+
     .txt {
         width: 50%;
         font-size: 14px;
     }
+
     .fIzq {
         min-width: 46%;
     }
+
     .fIzq p {
-        display: inline-grid
-    ;
+        display: inline-grid;
     }
+
     .fDcha p {
         font-size: 14px;
     }
-    .accordion, 
-    .panel{
+
+    .accordion,
+    .panel {
         width: 80%;
     }
 }
+
 @media (max-width: 376px) {
     body {
         font-size: 13px;
     }
+
     header {
         font-size: 11px;
     }
-    .tooltip{
+
+    .tooltip {
         bottom: -20px;
     }
 
     .foto {
         width: 45%;
-        
+
     }
+
     .txt {
         width: 55%;
         font-size: 12px;
     }
+
     .txt h1 {
         font-size: 20px;
     }
+
     .fDcha a {
         padding: 8px;
     }
+
     .fIzq {
         min-width: 50%;
     }
