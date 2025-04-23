@@ -215,9 +215,6 @@ p {
     position: relative;
 }
 
-.panel img{
-    border-radius: 60px;
-}
 
 .carousel-container {
     display: flex;
@@ -225,9 +222,6 @@ p {
     height: 100%;
     transition: transform 0.5s ease-in-out;
 }
-
-
-
 .accordion:after {
     content: '\02795';
     font-size: 13px;
@@ -236,13 +230,14 @@ p {
     margin-left: 5px;
 }
 
-
-
-.d-block.w-100 {
-    width: 80% !important;
-    margin: 0 auto;
-    padding: 50px;
+.panel img{
+    width: 100% !important;
 }
+.d-block.w-100 {
+    margin: 0 auto;
+    padding: 0px 110px 50px 110px;
+}
+
 
 #carouselCertificadosJava,
 #carouselCertificadosSpring,
@@ -287,6 +282,7 @@ td {
     .tooltip {
         left: 68.5%;
     }
+
 }
 
 @media (max-width: 960px) {
