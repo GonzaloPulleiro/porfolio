@@ -83,42 +83,78 @@ hr {
     display: inline-flex;
 }
 
-.barraTop li {
+.barraTop li{
     padding: 10px;
 }
 
-.barraTop a {
+.respmenu li {
+    padding: 5px;
+}
+
+.barraTop a,
+.respmenu a {
     color: wheat;
     text-decoration: none;
 }
 
-.barraTop a:hover {
+.barraTop a:hover,
+.respmenu a:hover {
     color: burlywood;
 }
 
-.tooltip {
-    visibility: hidden;
-    color: #1a1a1a;
+.respmenu ul{
+    list-style: none;
     text-align: center;
-    padding: 12px;
-    position: absolute;
-    bottom: -13px;
-    left: 62.5%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.3s;
-    font-size: 12px;
-    font-weight: bold;
-    background-color: white;
-    border-radius: 40px;
-    border-top-right-radius: 0;
-    font-family: Arial, sans-serif;
 }
 
-#downloadCV:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
+
+.respmenu input[type="checkbox"],
+.respmenu .fa-bars,
+.respmenu .fa-times {
+    position: absolute;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+}
+
+.respmenu .fa-bars,
+.respmenu .fa-times {
+    font-size: 48px;
+    pointer-events: none;
+}
+
+.respmenu input[type="checkbox"] {
+    opacity: 0;
+}
+
+.respmenu {
+    color: white;
+    position: relative;
+    display: none;
+    min-height: 48px;
+
+}
+
+.respmenu nav {
+    display: none;
+    text-wrap: nowrap;
+}
+
+.respmenu input:checked~nav {
+    display: block;
+    
+}
+
+.respmenu input:checked~.fa-bars {
+    display: none;
+}
+
+.respmenu input:not(:checked)~.fa-times {
+    display: none;
 }
 
 #presentacion {
@@ -209,7 +245,7 @@ p {
     padding: 0 21px;
     display: none;
     overflow: hidden;
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     border-radius: 10px;
     position: relative;
@@ -220,8 +256,9 @@ p {
     display: flex;
     width: 100%;
     height: 100%;
-    transition: transform 0.5s ease-in-out;
+    /* transition: transform 0.5s ease-in-out; */
 }
+
 .accordion:after {
     content: '\02795';
     font-size: 13px;
@@ -230,25 +267,34 @@ p {
     margin-left: 5px;
 }
 
-.panel img{
+.panel img {
     width: 100% !important;
 }
+
+.panel .carousel-item {
+    float: none;
+    margin-right: 27%;
+}
+
+.panel .carousel-indicators {
+    bottom: -36px;
+}
+
+.panel .carousel-control-prev {
+    left: -40px;
+}
+
+.panel .carousel-control-next {
+    right: -40px;
+}
+
+
 .d-block.w-100 {
     margin: 0 auto;
-    padding: 0px 110px 50px 110px;
 }
 
-
-#carouselCertificadosJava,
-#carouselCertificadosSpring,
-#carouselCertificadosAngular,
-#carouselCertificadosPython {
-    margin: 10px;
-}
-
-
-.carousel-inner .carousel-item {
-    transition: transform 1s ease-in-out;
+.panel .carousel-item{
+    transition: none;
 }
 
 
@@ -257,18 +303,22 @@ table {
     width: 60%;
     margin: 20px auto;
     font-family: Arial, sans-serif;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-th, td {
+
+th,
+td {
     padding: 12px 16px;
     text-align: left;
 }
+
 thead {
     background-color: rgb(102, 123, 124);
     color: white;
 }
+
 tr:nth-child(even) {
-    background-color:   rgb(191, 201, 201);
+    background-color: rgb(191, 201, 201);
 }
 
 td {
@@ -276,22 +326,37 @@ td {
 }
 
 
+.carousel-item {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.d-block.w-100 {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
 
-@media (max-width: 1300px) {
-    .tooltip {
-        left: 68.5%;
+@media (max-width: 1800px) {
+    .panel .carousel-item {
+        float: none;
+        margin: 0 auto;
     }
-
 }
 
 @media (max-width: 960px) {
-    .tooltip {
-        left: 75%;
-    }
-
     .fDcha {
         width: 90%;
+    }
+
+    .panel .carousel-control-next {
+        right: -72px;
+    }
+
+    .panel .carousel-control-prev {
+        left: -72px;
     }
 }
 
@@ -299,10 +364,6 @@ td {
 
     body {
         font-size: 20px;
-    }
-
-    .tooltip {
-        left: 84%;
     }
 
     .foto {
@@ -352,9 +413,15 @@ td {
         padding: 10px;
     }
 
+    .panel .carousel-control-next {
+        right: -58px;
+    }
+
+    .panel .carousel-control-prev {
+        left: -58px;
+    }
+
 }
-
-
 
 @media (max-width: 640px) {
 
@@ -400,6 +467,33 @@ td {
         width: 60%;
     }
 
+    .panel .carousel-control-next {
+        right: -50px;
+    }
+
+    .panel .carousel-control-prev {
+        left: -50px;
+    }
+
+}
+
+@media (max-width: 560px) {
+    header{
+        padding: 5px 20px;
+    }
+    .barraTop {
+        display: none;
+    }
+    .respmenu {
+        display: block;
+    }
+    .panel .carousel-control-next {
+        right: -45px;
+    }
+
+    .panel .carousel-control-prev {
+        left: -45px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -409,16 +503,11 @@ td {
     }
 
     header {
-        font-size: 15px;
-        padding: 15px 0px;
+        font-size: 16px;
     }
 
     .barraTop li {
         padding: 6px;
-    }
-
-    .tooltip {
-        left: 91%;
     }
 
     #presentacion {
@@ -445,34 +534,32 @@ td {
     .fIzq {
         min-width: 50%;
     }
+
+    .panel .carousel-control-next {
+        right: -40px;
+    }
+
+    .panel .carousel-control-prev {
+        left: -40px;
+    }
 }
 
 @media (max-width: 430px) {
-    header {
-        font-size: 14px;
-    }
-
-    .tooltip {
-        left: 91%;
-        bottom: -5px;
-    }
-
     .fDcha p {
         font-size: 15px;
+    }
+    .panel .carousel-control-next {
+        right: -35px;
+    }
+
+    .panel .carousel-control-prev {
+        left: -35px;
     }
 }
 
 @media (max-width: 390px) {
     body {
         font-size: 14px;
-    }
-
-    header {
-        font-size: 12px;
-    }
-
-    .tooltip {
-        left: 90%;
     }
 
     .foto {
@@ -500,19 +587,19 @@ td {
     .panel {
         width: 80%;
     }
+
+    .panel .carousel-control-next {
+        right: -30px;
+    }
+
+    .panel .carousel-control-prev {
+        left: -30px;
+    }
 }
 
 @media (max-width: 376px) {
     body {
         font-size: 13px;
-    }
-
-    header {
-        font-size: 11px;
-    }
-
-    .tooltip {
-        bottom: -20px;
     }
 
     .foto {
